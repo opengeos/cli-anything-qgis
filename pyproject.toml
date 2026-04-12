@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+# Use importlib mode to prevent pytest from adding intermediate directories
+# (cli_anything/) to sys.path, which would shadow system 'qgis' with our
+# cli_anything/qgis/ subpackage.
+addopts = "--import-mode=importlib"
