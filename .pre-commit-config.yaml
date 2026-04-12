@@ -22,7 +22,7 @@ repos:
           - id: codespell
             args:
                 [
-                    "--ignore-words-list=aci",
+                    "--ignore-words-list=aci,shotcut",
                     "--skip=*.csv,*.geojson,*.json,*.yml*.js,*.html,*cff,*.pdf",
                 ]
 
