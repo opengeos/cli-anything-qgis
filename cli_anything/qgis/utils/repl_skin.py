@@ -237,7 +237,7 @@ class ReplSkin:
             mod = "*" if modified else ""
             parts.append(f" {self._c(_DARK_GRAY, '[')}")
             parts.append(self._c(_LIGHT_GRAY, f"{ctx}{mod}"))
-            parts.append(self._c(_DARK_GRAY, ']'))
+            parts.append(self._c(_DARK_GRAY, "]"))
 
         parts.append(self._c(_GRAY, " ❯ "))
 

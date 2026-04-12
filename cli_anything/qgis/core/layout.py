@@ -195,7 +195,7 @@ def add_scalebar(layout_name, x=10, y=10, width=60, height=15):
     scalebar.attemptSetSceneRect(QRectF(x, y, width, height))
 
     # Link to first map item if available
-    map_items = [item for item in layout.items() if hasattr(item, 'setExtent')]
+    map_items = [item for item in layout.items() if hasattr(item, "setExtent")]
     if map_items:
         scalebar.setLinkedMap(map_items[0])
 

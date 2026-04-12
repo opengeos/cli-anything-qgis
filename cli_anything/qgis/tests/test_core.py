@@ -11,7 +11,6 @@ import shutil
 
 import pytest
 
-
 # ── Session Tests ─────────────────────────────────────────────────────
 
 
@@ -252,7 +251,7 @@ class TestBackend:
 
         original_import = (
             __builtins__.__import__
-            if hasattr(__builtins__, '__import__')
+            if hasattr(__builtins__, "__import__")
             else __import__
         )
         monkeypatch.setattr("builtins.__import__", mock_import)

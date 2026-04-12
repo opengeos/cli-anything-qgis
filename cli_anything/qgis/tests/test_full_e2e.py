@@ -14,7 +14,6 @@ import tempfile
 
 import pytest
 
-
 # ── Helpers ───────────────────────────────────────────────────────────
 
 
@@ -286,7 +285,7 @@ class TestVector:
 
         create_project(os.path.join(tmp_dir, "expr_test.qgz"))
         added = add_vector_layer(geojson_path)
-        result = query_features(added["id"], expression='"name" = \'Origin\'')
+        result = query_features(added["id"], expression="\"name\" = 'Origin'")
         assert result["count"] == 1
         assert result["features"][0]["attributes"]["name"] == "Origin"
 

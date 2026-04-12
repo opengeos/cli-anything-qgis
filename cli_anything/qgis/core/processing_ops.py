@@ -4,7 +4,6 @@ import json
 
 from cli_anything.qgis.utils.qgis_backend import ensure_qgis
 
-
 _processing_initialized = False
 
 
@@ -96,7 +95,7 @@ def algorithm_info(algorithm_id):
             "type": param.type(),
             "optional": (
                 not (param.flags() & param.Flag.FlagOptional) == 0
-                if hasattr(param, 'Flag')
+                if hasattr(param, "Flag")
                 else False
             ),
         }
@@ -177,9 +176,9 @@ def run_algorithm(algorithm_id, parameters, feedback_callback=None):
     # Serialize results
     serialized = {}
     for key, value in results.items():
-        if hasattr(value, 'source'):
+        if hasattr(value, "source"):
             serialized[key] = value.source()
-        elif hasattr(value, 'id'):
+        elif hasattr(value, "id"):
             serialized[key] = str(value.id())
         else:
             serialized[key] = str(value) if value is not None else None

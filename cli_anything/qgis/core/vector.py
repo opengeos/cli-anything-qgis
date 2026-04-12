@@ -60,7 +60,7 @@ def query_features(layer_id, expression=None, limit=100, fields=None):
         geom = feat.geometry()
         if not geom.isNull():
             f["geometry_type"] = (
-                geom.type().name if hasattr(geom.type(), 'name') else str(geom.type())
+                geom.type().name if hasattr(geom.type(), "name") else str(geom.type())
             )
             f["geometry_wkt"] = geom.asWkt(precision=6)
         else:
