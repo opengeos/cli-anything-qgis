@@ -21,7 +21,7 @@ Command-line interface for QGIS — operate QGIS GIS functionality without a GUI
 ## Installation
 
 ```bash
-cd agent-harness
+cd cli-anything-qgis
 pip install -e .
 ```
 
@@ -213,7 +213,7 @@ up to 50 levels of undo/redo history.
 ## Running Tests
 
 ```bash
-cd agent-harness
+cd cli-anything-qgis
 python -m pytest cli_anything/qgis/tests/ -v -s
 ```
 
